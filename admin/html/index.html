@@ -6,26 +6,56 @@
   <title>Document</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div class="main">
-        <header>
-            <nav class="navbar navbar-dark" >
+        <header class="shadow-down zindex-9">
+            <nav class="navbar navbar-dark theme-green" >
                 <!-- logo -->
                 <div class="logo">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand font-whiter" href="#">
                         <img src="../img/logo.png" width="50" height="50" class="d-inline-block " alt="">
                         拍案言法
                     </a>
                 </div>
-            
+                <ul class="navbar-nav mr-auto" id="nav-ul">
+                    <li class="nav-item aside-menu click-ripple" >
+                        <span class="oi oi-menu font-whiter"></span>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <aside>
-            
+        <aside class="shadow-right zindex-8">
+            <nav class="sidebar font-black">
+                <ul class="sidebar-ul">
+                    <li class="sidebar-li click-ripple">
+                        <a href="#" class="sidebar-a">
+                            <span class="oi oi-envelope-closed"></span>
+                            menu1
+                        </a>
+                        <span class="oi oi-chevron-left"></span>
+                    </li>
+                    <li class="sidebar-li click-ripple">
+                        <a href="#" class="sidebar-a">
+                            <span class="oi oi-briefcase"></span>
+                            menu2
+                        </a>
+                        <span class="oi oi-chevron-left"></span>
+                    </li>
+                    <li class="sidebar-li click-ripple">
+                        <a href="#" class="sidebar-a">
+                            <span class="oi oi-bar-chart"></span>
+                            menu3
+                        </a>
+                        <span class="oi oi-chevron-left"></span>
+                    </li>
+                </ul>
+            </nav>
         </aside>
     </div>
 </body>
+<script src="../js/app.js"></script>
 </html>
