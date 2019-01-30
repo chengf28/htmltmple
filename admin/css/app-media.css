@@ -1,0 +1,95 @@
+/* pc */
+@media screen and (min-width:992px)
+{
+	.sidebar{
+		width: 15rem;
+	}
+	.sidebar-mini  .sidebar
+	{
+		width: 5rem;
+    }
+    .sidebar .sidebar-ul .sidebar-li .sidebar-content,
+    .sidebar .sidebar-ul .sidebar-li .sidebar-title
+    {
+
+    }
+    .sidebar-mini .sidebar .sidebar-ul .sidebar-li .sidebar-content > a,
+    .sidebar-mini .sidebar .sidebar-ul .sidebar-li .sidebar-title > a
+    {
+        display: none;
+    }
+
+    .sidebar-mini .sidebar .sidebar-ul .active
+    {
+        width: 15rem;
+        position: relative;
+    }
+    .sidebar-mini .sidebar .sidebar-ul .active div[class*='sidebar-']
+    {
+        /* transition: all .2s linear; */
+    	width: 100%;
+
+    }
+     /* active 选择状态 */
+    .sidebar-mini .sidebar .sidebar-ul .active .sidebar-content > a,
+    .sidebar-mini .sidebar .sidebar-ul .active .sidebar-title > a
+    {
+        display: inline-block;
+    }
+
+    .sidebar-mini .sidebar .sidebar-ul .sidebar-li > ul[class*=sidebar-child]
+    {
+        transition: all .5s;
+        left      : 5rem;
+        width     : 10rem;
+        position  : absolute;
+        background: #fff;
+        box-shadow: 5px 5px 15px -8px rgba(0, 0, 0, .5);
+    }
+
+    .content
+    {
+        margin-left: 15rem;
+    }
+    
+    .sidebar-mini .content
+    {
+        margin-left: 5rem;
+    }
+
+}
+/* large */
+@media screen and (max-width: 991.8px) 
+{
+	header > nav > .logo
+	{
+		transition: all .2s linear;
+		transform: scale(0);
+		width: 2rem !important;
+    }
+    aside{
+        overflow: hidden;
+    }
+	.sidebar{
+		width: 15rem;
+	}
+	.sidebar-mini .sidebar
+	{
+		width: 0;
+	}
+}
+/* medium */
+@media screen and (max-width:768px)
+{
+
+}
+/* small */
+@media screen and (max-width:576px)
+{
+
+}
+/* Extra small */
+@media screen and (min-width:576px)
+{
+
+}

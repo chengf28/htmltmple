@@ -6,110 +6,6 @@ html,body{
 	height: 100%;
 	background: rgb(238, 245, 249);
 }
-/* pc */
-@media screen and (min-width:992px)
-{
-	.sidebar{
-		width: 15rem;
-	}
-	.sidebar-mini > .sidebar
-	{
-		width: 5rem;
-	}
-}
-/* large */
-@media screen and (max-width: 991.8px) 
-{
-	header > nav > .logo
-	{
-		transition: all .2s linear;
-		transform: scale(0);
-		width: 2rem !important;
-	}
-	.sidebar{
-		width: 15rem;
-	}
-	.sidebar-mini > .sidebar
-	{
-		width: 0;
-	}
-}
-/* medium */
-@media screen and (max-width:768px)
-{
-
-}
-/* small */
-@media screen and (max-width:576px)
-{
-
-}
-/* Extra small */
-@media screen and (min-width:576px)
-{
-
-}
-
-.theme-green
-{
-	background: rgb(79, 122, 131);
-}
-.theme-whiter{
-	background: #fff;
-}
-
-.font-green{
-	color:rgb(79, 122, 131);
-}
-.font-whiter
-{
-	color: #fff !important;
-}
-.font-black
-{
-	color:#232323 !important;
-}
-.shadow-up{
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .5);
-}
-.shadow-down{
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .5);
-}
-.shadow-right{
-	box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, .5);
-}
-
-.zindex-1{
-	z-index: 1;
-}
-.zindex-2{
-	z-index: 2;
-}
-.zindex-3{
-	z-index: 3;
-}
-.zindex-4{
-	z-index: 4;
-}
-.zindex-5{
-	z-index: 5;
-}
-.zindex-6{
-	z-index: 6;
-}
-.zindex-7{
-	z-index: 7;
-}
-.zindex-8{
-	z-index: 8;
-}
-.zindex-9{
-	z-index: 9;
-}
-.zindex-0{
-	z-index: 0;
-}
-
 .main{
 	height: 100%;
 }
@@ -121,8 +17,10 @@ header{
 
 header > nav > .logo{
 	margin-left: -1rem;
+	padding-left: 1rem; 
 	width: 15rem;
 	height: 100%;
+	box-sizing: border-box;
 }
 
 header > nav > ul[id=nav-ul]
@@ -145,7 +43,7 @@ aside {
 	background: #fff;
 	padding-top: 76px;
 	transition: all .2s ease-in-out;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .aside-menu
@@ -162,50 +60,95 @@ aside {
 	height: inherit;
 	padding: 2rem 1rem;
 	list-style-type: none;
+	color:#6c757d;
 }
-.sidebar .sidebar-ul .sidebar-li 
+.sidebar .sidebar-ul .sidebar-li
 {
 	width : 100%;
 	height: auto;
 	cursor: pointer;
+	display: inline-block;
+}
+.sidebar .sidebar-ul .active >  div[class*='sidebar-']
+{
+	box-shadow      : 0px 0px 8px 0px rgba(0, 0, 0, .5);
+	background-color: rgb(79, 122, 131);
+	color           : #eee;
+	transition      : all .2s linear;
+	overflow        : hidden;
 }
 .sidebar .sidebar-ul .sidebar-li .sidebar-content,
 .sidebar .sidebar-ul .sidebar-li .sidebar-title
 {
-	display        : flex;
-	justify-content: space-between;
-	align-items    : center;
-	width          : 100%;
-	height         : 100%;
-	padding        : .5rem;
-	border-radius  : .3rem;
-	height         : 3rem;
-	z-index: 1;
+	display   : inline-block;
+	width     : 100%;
+	height    : 100%;
+	padding   : .6rem;
+	z-index   : 1;
+	transition: box-shadow .3s;
 }
+
+.sidebar .sidebar-ul .sidebar-li .sidebar-content > span[class*=oi] ,
+.sidebar .sidebar-ul .sidebar-li .sidebar-title >  span[class*=oi]
+{
+	margin-left: .5rem;
+}
+
 .sidebar .sidebar-ul .sidebar-li .sidebar-content > a,
 .sidebar .sidebar-ul .sidebar-li .sidebar-title > a
 {
-	display        : flex;
-	align-items    : center;
+	font-weight: bold;
+	padding-left: 2rem;
+}
+.sidebar .sidebar-ul .sidebar-li a,
+.sidebar .sidebar-ul .sidebar-child-li a
+{
 	text-decoration: none;
 	color          : inherit;
 }
-.sidebar .sidebar-ul .sidebar-li .sidebar-content > a > span[class=oi],
-.sidebar .sidebar-ul .sidebar-li .sidebar-title > a > span[class=oi]
-{
-	padding-right: .4rem;
-}
+
 .sidebar .sidebar-ul .sidebar-li div[class*='sidebar-']:hover
 {
-	color:rgb(241, 124, 103);
+	color:#000;
+}
+.sidebar .sidebar-ul .active div[class*='sidebar-']:hover
+{
+	color: #fff;
 }
 .sidebar .sidebar-ul .sidebar-li > ul[class*=sidebar-child]
 {
 	list-style-type: none;
-	display: none;
-	position: relative;
+	display        : none;
+	position       : relative;
+	user-select    : none;
+}
+.sidebar .sidebar-ul .active > ul[class*=sidebar-child]
+{
+	display: block !important;
 }
 .sidebar .sidebar-ul .sidebar-li > ul[class*=sidebar-child] > .sidebar-child-li
 {
-	
+	width : 100%;
+	padding: 1rem 1.5rem;
+}
+
+.sidebar .sidebar-ul .sidebar-li > ul[class*=sidebar-child] > .sidebar-child-li:hover > a
+{
+	color:rgb(43, 120, 136);
+	font-weight: bold;
+}
+
+/* 异常title */
+.header-content
+{
+	width: 100%;
+	height: 76px;
+}
+
+/* 右侧主题内容 */
+.content
+{
+	background: #000;
+	height: 100px;
+	transform: all .5s;
 }
